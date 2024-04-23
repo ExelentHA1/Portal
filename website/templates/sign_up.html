@@ -95,29 +95,5 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    document.getElementById("signup-form").addEventListener("submit", function(event) {
-      var fullname = document.getElementById("fullname").value;
-      var password = document.getElementById("password").value;
-      var confirm_password = document.getElementById("confirm_password").value;
-      if (fullname.length < 3) {
-        document.getElementById("fullname_error").classList.remove("d-none");
-        event.preventDefault();
-      } else {
-        document.getElementById("fullname_error").classList.add("d-none");
-      }
-      if (password !== confirm_password) {
-        document.getElementById("password_error").classList.remove("d-none");
-        event.preventDefault();
-      } else {
-        document.getElementById("password_error").classList.add("d-none");
-      }
-    });
-    // var urlParams = new URLSearchParams(window.location.search);
-    // var loginSuccess = urlParams.get('loginSuccess');
-    // if (loginSuccess === 'true') {
-    //  alert('Sign Up Success!');
-    // }
-  </script>
 </body>
 </html>
