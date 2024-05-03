@@ -5,6 +5,9 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login', methods=['GET', 'POST'])
 def Login():
+    if request.method == "POST":
+        print(request.form)
+        
     return render_template('login.html')
 
 @auth.route('/logout')
@@ -18,5 +21,6 @@ def SignUp():
         email = request.form.get('email')
         pass1 = request.form.get('password')
         pass2 = request.form.get('confirm_password')
-        # print(request.form)
+        print(request.form)
+        flash("You Suck Boi", 'error')
     return render_template('sign_up.html')
