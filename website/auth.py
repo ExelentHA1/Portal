@@ -22,5 +22,5 @@ def SignUp():
         pass1 = request.form.get('password')
         pass2 = request.form.get('confirm_password')
         print(request.form)
-        flash("Error", 'error')
+        flash("You Suck Boi", 'error')
     return render_template('sign_up.html')

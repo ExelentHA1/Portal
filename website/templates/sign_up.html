@@ -28,9 +28,11 @@
           </button>
         </div>
       {% else %}
-        <div class="alert alert-success alert-dismissable" role="alert">
-          <div>{{ message }} </div>
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="alert alert-danger alert-dismissable fade show" role="alert">
+          <div>{{ message }}</div>
+          <button type="button" class="btn-close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
       {% endif %}
     {% endfor %}
